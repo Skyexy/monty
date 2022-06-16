@@ -39,7 +39,6 @@ int main(int argc, char **argv)
 		line_count++;
 	}
 	free(buffer);
-	free_stack(stack);
 	fclose(file);
 	exit(status);
 }
