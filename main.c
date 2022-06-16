@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 	FILE *file;
 	char *buffer = NULL;
 	char *str = NULL;
+	int n = 1024;
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
 	
@@ -27,7 +28,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	printf("sup");
-	while (fgets(buffer, 1024, file) != NULL)
+	while (fgets(buffer, n, file) != NULL)
 	{
 		exit (0);
 		if (status)
