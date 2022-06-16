@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int status = 0;
+status = 0;
 
 int main(int argc, char **argv)
 {
