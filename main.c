@@ -3,7 +3,7 @@
 #include <string.h>
 #include "monty.h"
 
-status = 0;
+int status = 0;
 
 int main(int argc, char **argv)
 {
