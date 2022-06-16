@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 	FILE *file;
 	char *buffer = NULL;
 	char *str = NULL;
-	stack_t stack = NULL;
+	stack_t *stack = NULL;
 	unsigned int line_count = 1;
 	
 	if (argc != 2)
