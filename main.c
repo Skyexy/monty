@@ -42,7 +42,5 @@ int main(int argc, char **argv)
 		opcode(&stack, str, line_count);
 		line_count++;
 	}
-	free(buffer);
-	fclose(file);
 	exit(status);
 }
