@@ -22,7 +22,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_cnt)
 	{
 		if (strcmp(instructions[i].opcode, str) == 0)
 		{
-			op[i].f(stack, line_cnt);
+			instructions[i].f(stack, line_cnt);
 			return; /* if we found a match, run the function */
 		}
 		i++;
