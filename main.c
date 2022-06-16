@@ -31,11 +31,12 @@ int main(int argc, char **argv)
 		}
 		if (*buffer == '\n')
 		{
-			line_cnt++;
+			line_count++;
 			continue;
 		}
 		str = strtok(buffer, " \t\n");
-		line_cnt++;
+		opcode(&stack, str, line_count);
+		line_count++;
 	}
 	free(buffer);
 	free_stack(stack);
