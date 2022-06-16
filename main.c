@@ -27,6 +27,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	printf("sup");
+	exit (0);
 	while (fgets(buffer, 1024, file) != NULL)
 	{
 		if (status)
