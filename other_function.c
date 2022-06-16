@@ -15,6 +15,5 @@
 void opcode(stack_t **stack __attribute__((unused)), char *str, unsigned int line_cnt __attribute__((unused)))
 {
 	printf("%s", str);
-	status = EXIT_FAILURE;
 	return;
 }
