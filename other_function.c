@@ -3,11 +3,7 @@
 #include <string.h>
 #include "monty.h"
 
-instruction_t instructions[] = 
-{
-	{"push", push},
-	{NULL, NULL},
-}
+
 /**
  * opcode - function in charge of running builtins
  * @stack: stack given by main
