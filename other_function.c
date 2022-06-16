@@ -3,7 +3,9 @@
 #include <string.h>
 #include "monty.h"
 
-
+instruction_t instructions = {
+	{NULL , NULL},
+}
 /**
  * opcode - function in charge of running builtins
  * @stack: stack given by main
