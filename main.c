@@ -30,7 +30,6 @@ int main(int argc, char **argv)
 	printf("sup");
 	while (fgets(buffer, n, file) != NULL)
 	{
-		exit (0);
 		if (status)
 		{
 			break;
