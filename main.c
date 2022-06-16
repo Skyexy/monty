@@ -8,7 +8,7 @@ int status = 0;
 int main(int argc, char **argv)
 {
 	FILE *file;
-	char *buffer = NULL;
+	char buffer[1024];
 	char *str = NULL;
 	int n = 1024;
 	stack_t *stack = NULL;
