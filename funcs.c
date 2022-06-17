@@ -46,5 +46,6 @@ void rotl(stack_t **stack, unsigned int line_count)
 	right->next = left; /* a circle infinite linked list loop */
 	left->prev = right;
 	left->next = NULL;
-	pop(stack, line_count);
+	*stack = left->next;
+	(*stack)->prev = NULL;
 }
