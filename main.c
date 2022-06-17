@@ -51,7 +51,6 @@ int main(int argc, char **argv)
 		opcode(&stack, str, line_count);
 		line_count++;
 	}
-	free(buffer);
 	free_stack(stack);
 	free(str);
 	fclose(file);
