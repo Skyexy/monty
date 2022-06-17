@@ -13,7 +13,7 @@ instruction_t instructions[] = {
 	{"add", add},
 	{"nop", nop},
 	{"sub", sub},
-	{"div", div},
+	{"div", _div},
 	{"mul", mul},
 	{NULL, NULL},
 };
