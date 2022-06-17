@@ -51,6 +51,13 @@ void opcode(stack_t **stack __attribute__((unused)), char *str, unsigned int lin
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_cnt, str);
 	status = EXIT_FAILURE;
 }
+/**
+ * push - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
 void push(stack_t **stack, unsigned int line_cnt)
 {
 	char *n = argument;
@@ -99,6 +106,12 @@ void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
  *
  * Return: number of elements of the list
  */
+/**
+ * print_stack - computes the remainder of the division
+ * @stack: stack given by main
+ *
+ * Return: size_t
+ */
 size_t print_stack(const stack_t *stack)
 {
 	size_t c = 0;
@@ -132,6 +145,13 @@ int is_digit(char *string)
 	}
 	return (1);
 }
+/**
+ * pint - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
 void pint(stack_t **stack, unsigned int line_cnt)
 {
 	if(*stack != NULL)
@@ -146,6 +166,14 @@ void pint(stack_t **stack, unsigned int line_cnt)
 		return;
 	}
 }
+
+/**
+ * pop - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
 void pop(stack_t **stack, unsigned int line_cnt)
 {
 	stack_t *point;
@@ -191,6 +219,14 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	tmp->next->n = tmp_n;
 
 }
+
+/**
+ * add - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
 void add(stack_t **stack, unsigned int line_cnt)
 {
 	int result;
@@ -206,6 +242,14 @@ void add(stack_t **stack, unsigned int line_cnt)
 	pop(stack, line_cnt);/*For top node*/
 	(*stack)->n = result;
 }
+
+/**
+ * nop - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
 void nop(stack_t **stack __attribute__((unused)), unsigned int line_cnt __attribute__((unused)))
 {
 	return;
