@@ -32,5 +32,6 @@ typedef struct instruction_s
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 extern int status;
 extern char* argument;
+void push(stack_t **stack, unsigned int line_cnt);
 
 #endif /* MONTY */
