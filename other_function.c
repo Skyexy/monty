@@ -69,7 +69,6 @@ void push(stack_t **stack, unsigned int line_cnt)
 	char *n = argument;
 	int num = atoi(n);
 	stack_t *new = malloc(sizeof(stack_t));
-	size_t t;
 
 	if ((is_digit(n)) == 0)
 	{
