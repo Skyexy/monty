@@ -26,6 +26,33 @@ void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 }
 
 /**
+* rotl - rotates the first element of the stack
+* @stack: stack head
+* @line_count: line count
+*
+* Return: void
+*/
+void rotl(stack_t **stack, unsigned int line_count)
+{
+	stack_t *left;
+	stack_t *right;
+
+	(void) line_count;
+	if (!stack || !*stack || !(*stack)->next)
+		return;
+
+	left = right = *stack;
+
+	while (right->next) /* move the right pointer to the last node */
+		right = right->next;
+	right->next = left; /* a circle infinite linked list loop */
+	left->prev = right;
+	*stack = left->next; /* so we cut the link between the 0 and 1 element */
+	(*stack)->prev->next = NULL;
+	(*stack)->prev = NULL;
+}
+
+/**
 * rotr - rotates the last node of a stack_t stack
 * @stack: stack head
 * @line_count: line count
@@ -52,4 +79,47 @@ void rotr(stack_t **stack, unsigned int line_count)
 	prev->next = NULL;
 	(*stack)->prev = bottom;
 	*stack = bottom;
+}
+
+/**
+ * queue_node - adds a node to a stack_t stack in queue node
+ * @stack: stack head
+ * @n: number of the node
+ *
+ * Return: newly created node, if memory allocation fails, the function will
+ * return NULL.
+ */
+stack_t *queue_node(stack_t **stack, const int n)
+{
+	stack_t *new = malloc(sizeof(stack_t));
+	stack_t *current = *stack;
+
+	if (!new)
+	{
+		free(new);
+		return (NULL);
+	}
+	new->n = n;
+
+	if (!*stack)
+	{
+		new->next = NULL;
+		new->prev = NULL;
+		*stack = new;
+		return (new);
+	}
+
+	while (current)
+	{
+		if (!current->next)
+		{
+			new->next = NULL;
+			new->prev = current;
+			current->next = new;
+			break;
+		}
+		current = current->next;
+	}
+
+	return (new);
 }
