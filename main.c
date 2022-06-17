@@ -5,7 +5,7 @@
 
 int status = 0;
 char *argument;
-int que = 1;
+int que;
 
 int main(int argc, char **argv)
 {
@@ -15,6 +15,7 @@ int main(int argc, char **argv)
 	int n = 1024;
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
+	que = 1;
 	
 	if (argc != 2)
 	{
@@ -50,5 +51,9 @@ int main(int argc, char **argv)
 		opcode(&stack, str, line_count);
 		line_count++;
 	}
+	free(buffer);
+	free_stack(stack);
+	free(str);
+	fclose(file);
 	exit(status);
 }
