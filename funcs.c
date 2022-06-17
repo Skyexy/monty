@@ -37,8 +37,9 @@ void rotl(stack_t **stack, unsigned int line_count __attribute__((unused)))
 	stack_t *right;
 
 	if (!stack || !*stack || !(*stack)->next)
+	{
 		return;
-
+	}
 	left = right = *stack;
 
 	while (right->next) /* move the right pointer to the last node */
@@ -47,5 +48,6 @@ void rotl(stack_t **stack, unsigned int line_count __attribute__((unused)))
 	left->prev = right;
 	left->next = NULL;
 	*stack = left->next;
+	(*stack)->prev->next = NULL;
 	(*stack)->prev = NULL;
 }
