@@ -37,5 +37,6 @@ int is_digit(char *string);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 size_t print_stack(const stack_t *stack);
 void pint(stack_t **stack, unsigned int line_cnt);
+void pop(stack_t **stack, unsigned int line_cnt);
 
 #endif /* MONTY */
