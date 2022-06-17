@@ -10,6 +10,7 @@ instruction_t instructions[] = {
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
+	{"add", add},
 	{NULL, NULL},
 };
 
@@ -186,7 +187,7 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	tmp->next->n = tmp_n;
 
 }
-void _add(stack_t **stack, unsigned int line_cnt)
+void add(stack_t **stack, unsigned int line_cnt)
 {
 	int result;
 
