@@ -52,7 +52,6 @@ int main(int argc, char **argv)
 		line_count++;
 	}
 	free_stack(stack);
-	free(str);
 	fclose(file);
 	exit(status);
 }
