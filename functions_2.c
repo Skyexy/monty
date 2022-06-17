@@ -110,6 +110,7 @@ void mod(stack_t **stack, unsigned int line_cnt)
 void pchar(stack_t **stack, unsigned int line_cnt)
 {
 	int c;
+	char t;
 
 	if (!stack || !(*stack))
 	{
@@ -117,8 +118,12 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 		status = EXIT_FAILURE;
 		return;
 	}
-	c = printf("%c\n", (*stack)->n);
-	if (c < 0)
+	t = (char) (*stack)->n);
+	if (isprint(t))
+	{
+		c = printf("%c\n", (*stack)->n);
+	};
+	else
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
 		status = EXIT_FAILURE;
