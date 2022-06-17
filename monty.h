@@ -32,6 +32,7 @@ typedef struct instruction_s
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 extern int status;
 extern char* argument;
+extern int que;
 void push(stack_t **stack, unsigned int line_cnt);
 int is_digit(char *string);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
@@ -48,5 +49,6 @@ void pchar(stack_t **stack, unsigned int line_cnt);
 void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 void rotl(stack_t **stack, unsigned int line_count);
 void rotr(stack_t **stack, unsigned int line_count);
+stack_t *queue_node(stack_t **stack, const int n);
 
 #endif /* MONTY */
