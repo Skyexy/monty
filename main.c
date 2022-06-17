@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 		str = strtok(buffer, " \t\n");
 		if (!str || *str == '#')
 		{
-			line_cnt++;
+			line_count++;
 			continue;
 		}
 		argument = strtok(NULL, " \t\n");
