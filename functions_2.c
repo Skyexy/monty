@@ -118,7 +118,7 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 		status = EXIT_FAILURE;
 		return;
 	}
-	t = (char) (*stack)->n);
+	t = (char) (*stack)->n;
 	if (isprint(t))
 	{
 		c = printf("%c\n", (*stack)->n);
