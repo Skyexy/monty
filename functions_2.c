@@ -121,7 +121,7 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 	if (isprint(t))
 	{
 		printf("%c\n", (*stack)->n);
-	};
+	}
 	else
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
