@@ -39,6 +39,7 @@ int main(int argc, char **argv)
 			continue;
 		}
 		str = strtok(buffer, " \t\n");
+		argument = strtok(NULL, " \t\n");
 		opcode(&stack, str, line_count);
 		line_count++;
 	}
