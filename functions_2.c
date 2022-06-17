@@ -70,6 +70,7 @@ void mul(stack_t **stack, unsigned int line_cnt)
 	pop(stack, line_cnt);/*For top node*/
 	(*stack)->n = result;
 }
+
 /**
  * mod - computes the remainder of the division
  * @stack: stack given by main
@@ -97,4 +98,30 @@ void mod(stack_t **stack, unsigned int line_cnt)
 	result = ((*stack)->next->n) % ((*stack)->n);
 	pop(stack, line_cnt);/*For top node*/
 	(*stack)->n = result;
+}
+
+/**
+ * mod - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
+void pchar(stack_t **stack, unsigned int line_cnt)
+{
+	int c;
+
+	if (!stack || !(*stack))
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_cnt);
+		status = EXIT_FAILURE;
+		return;
+	}
+	c = printf("%c", (*stack)->n);
+	if (c < 0)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
+		status = EXIT_FAILURE;
+		return;
+	}
 }
