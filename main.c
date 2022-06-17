@@ -4,6 +4,7 @@
 #include "monty.h"
 
 int status = 0;
+char *argument;
 
 int main(int argc, char **argv)
 {
