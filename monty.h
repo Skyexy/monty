@@ -46,5 +46,6 @@ void _div(stack_t **stack, unsigned int line_cnt);
 void mul(stack_t **stack, unsigned int line_cnt);
 void pchar(stack_t **stack, unsigned int line_cnt);
 void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
+void rotl(stack_t **stack, unsigned int line_count);
 
 #endif /* MONTY */
