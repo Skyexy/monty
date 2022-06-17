@@ -67,6 +67,7 @@ void push(stack_t **stack, unsigned int line_cnt)
 	char *n = argument;
 	int num = atoi(n);
 	stack_t *new = malloc(sizeof(stack_t));
+	size_t t;
 
 	if ((is_digit(n)) == 0)
 	{
@@ -82,14 +83,21 @@ void push(stack_t **stack, unsigned int line_cnt)
 		status = EXIT_FAILURE;
 		return;
 	}
-	new->n = num;
-
-	new->next = *stack;
-	new->prev = NULL;
-	if (*stack)
-		(*stack)->prev = new;
-	*stack = new;
-	return;
+	if (que == 1)
+	{
+		new->n = num;
+		new->next = *stack;
+		new->prev = NULL;
+		if (*stack)
+			(*stack)->prev = new;
+		*stack = new;
+		return;
+	}
+	else
+	{
+		queue_node(stack, const int n);
+		return;
+	}
 }
 
 /**
