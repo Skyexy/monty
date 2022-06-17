@@ -124,3 +124,14 @@ int is_digit(char *string)
 	}
 	return (1);
 }
+void pint(stack_t **stack, unsigned int line_cnt)
+{
+	if(*stack != NULL)
+	{
+		printf("%d\n", (*stack)->n);
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_cnt);
+	}
+}
