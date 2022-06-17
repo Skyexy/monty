@@ -11,7 +11,7 @@
  *
  * Return: void
  */
-void pstr(stack_t **stack, unsigned int line_cnt)
+void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 {
 	stack_t *current = *stack;
 	
