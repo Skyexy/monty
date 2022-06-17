@@ -40,6 +40,11 @@ int main(int argc, char **argv)
 			continue;
 		}
 		str = strtok(buffer, " \t\n");
+		if (!str || *str == '#')
+		{
+			line_cnt++;
+			continue;
+		}
 		argument = strtok(NULL, " \t\n");
 		opcode(&stack, str, line_count);
 		line_count++;
