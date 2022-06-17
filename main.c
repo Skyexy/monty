@@ -5,6 +5,7 @@
 
 int status = 0;
 char *argument;
+int que = 1;
 
 int main(int argc, char **argv)
 {
