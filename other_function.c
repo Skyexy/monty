@@ -22,12 +22,10 @@ void opcode(stack_t **stack __attribute__((unused)), char *str, unsigned int lin
 
 	if (!strcmp(str, "stack"))
 	{
-		global.data_struct = 1;
 		return;
 	}
 	if (!strcmp(str, "queue"))
 	{
-		global.data_struct = 0;
 		return;
 	}
 
@@ -47,14 +45,15 @@ void push(stack_t **stack, unsigned int line_cnt)
 {
 	char *n = argument;
 	int num = atoi(n);
+	stack_t *new = malloc(sizeof(stack_t));
 
 	if ((is_digit(n)) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_cnt);
+		free(new);
 		status = EXIT_FAILURE;
 		return;
 	}
-	stack_t *new = malloc(sizeof(stack_t));
 	if (!new)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
