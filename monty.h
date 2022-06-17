@@ -39,5 +39,6 @@ size_t print_stack(const stack_t *stack);
 void pint(stack_t **stack, unsigned int line_cnt);
 void pop(stack_t **stack, unsigned int line_cnt);
 void swap(stack_t **stack, unsigned int line_cnt);
+void add(stack_t **stack, unsigned int line_cnt);
 
 #endif /* MONTY */
