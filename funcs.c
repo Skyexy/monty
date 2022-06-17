@@ -45,5 +45,6 @@ void rotl(stack_t **stack, unsigned int line_count __attribute__((unused)))
 		right = right->next;
 	right->next = left; /* a circle infinite linked list loop */
 	left->prev = right;
+	left->next = NULL;
 	pop(stack, line_count);
 }
