@@ -96,7 +96,7 @@ void push(stack_t **stack, unsigned int line_cnt)
 	}
 	else
 	{
-		if (!queue_node(stack, atoi(num)))
+		if (!queue_node(stack, num))
 		{
 			return;
 			status = EXIT_FAILURE;
