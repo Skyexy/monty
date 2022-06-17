@@ -36,10 +36,12 @@ void opcode(stack_t **stack __attribute__((unused)), char *str, unsigned int lin
 
 	if (!strcmp(str, "stack"))
 	{
+		que = 1;
 		return;
 	}
 	if (!strcmp(str, "queue"))
 	{
+		que = 2;
 		return;
 	}
 
