@@ -36,7 +36,6 @@ void rotl(stack_t **stack, unsigned int line_count)
 	stack_t *left;
 	stack_t *right;
 
-	(void) line_count;
 	if (!stack || !*stack || !(*stack)->next)
 		return;
 
