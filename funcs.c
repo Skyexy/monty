@@ -24,3 +24,28 @@ void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 	}
 	putchar('\n');
 }
+/**
+* rotl - rotates the first element of the stack
+* @stack: stack head
+* @line_count: line count
+*
+* Return: void
+*/
+void rotl(stack_t **stack, unsigned int line_count)
+{
+	stack_t *left;
+	stack_t *right;
+
+	(void) line_count;
+	if (!stack || !*stack || !(*stack)->next)
+		return;
+
+	left = right = *stack;
+
+	while (right->next) /* move the right pointer to the last node */
+		right = right->next;
+	right->next = left; /* a circle infinite linked list loop */
+	left->prev = right;
+	left->next = NULL;
+	pop(stack, line_count);
+}
