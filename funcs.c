@@ -31,7 +31,7 @@ void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 *
 * Return: void
 */
-void rotl(stack_t **stack, unsigned int line_count)
+void rotl(stack_t **stack, unsigned int line_count __attribute__((unused)))
 {
 	stack_t *left;
 	stack_t *right;
