@@ -203,7 +203,7 @@ void add(stack_t **stack, unsigned int line_cnt)
 	pop(stack, line_cnt);/*For top node*/
 	(*stack)->n = result;
 }
-void nop(stack_t **stack, unsigned int line_cnt)
+void nop(stack_t **stack __attribute__((unused)), unsigned int line_cnt __attribute__((unused)))
 {
 	return;
 }
