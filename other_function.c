@@ -96,7 +96,7 @@ void push(stack_t **stack, unsigned int line_cnt)
 	}
 	else
 	{
-		queue_node(stack, const int n);
+		queue_node(stack, line_cnt);
 		return;
 	}
 }
