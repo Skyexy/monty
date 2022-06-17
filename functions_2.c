@@ -101,7 +101,7 @@ void mod(stack_t **stack, unsigned int line_cnt)
 }
 
 /**
- * mod - computes the remainder of the division
+ * pchar - computes the remainder of the division
  * @stack: stack given by main
  * @line_cnt: line counter
  *
