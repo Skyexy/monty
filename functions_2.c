@@ -109,7 +109,6 @@ void mod(stack_t **stack, unsigned int line_cnt)
  */
 void pchar(stack_t **stack, unsigned int line_cnt)
 {
-	int c;
 	char t;
 
 	if (!stack || !(*stack))
@@ -121,7 +120,7 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 	t = (char) (*stack)->n;
 	if (isprint(t))
 	{
-		c = printf("%c\n", (*stack)->n);
+		printf("%c\n", (*stack)->n);
 	};
 	else
 	{
