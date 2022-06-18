@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	if (argc != 2)
 		error_usage();
 
-	file = fopen(file2, "r");
+	file = fopen(argv[1], "r");
 
 	if (!file)
 		file_error(argv[1]);
