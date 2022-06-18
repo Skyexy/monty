@@ -70,6 +70,7 @@ void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 void rotl(stack_t **stack, unsigned int line_count);
 void rotr(stack_t **stack, unsigned int line_count);
 stack_t *queue_node(stack_t **stack, const int n);
+void mod(stack_t **stack, unsigned int line_cnt);
 void free_stack(stack_t *stack);
 
 #endif /* MONTY */
