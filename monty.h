@@ -29,6 +29,25 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+instruction_t instructions[] = {
+	{"push", push},
+	{"pall", pall},
+	{"pint", pint},
+	{"pop", pop},
+	{"swap", swap},
+	{"add", add},
+	{"nop", nop},
+	{"sub", sub},
+	{"div", _div},
+	{"mul", mul},
+	{"pchar", pchar},
+	{"pstr", pstr},
+	{"rotl", rotl},
+	{"rotr", rotr},
+	{NULL, NULL},
+};
+
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 extern int status;
 extern char* argument;
