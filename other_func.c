@@ -15,7 +15,7 @@ void pop(stack_t **stack, unsigned int line_cnt)
 {
 	stack_t *point;
 
-	if(stack || *stack != NULL)
+	if (stack || *stack != NULL)
 	{
 		point = *stack;
 		*stack = (*stack)->next;
@@ -89,5 +89,4 @@ void add(stack_t **stack, unsigned int line_cnt)
  */
 void nop(stack_t **stack __attribute__((unused)), unsigned int line_cnt __attribute__((unused)))
 {
-	return;
 }
