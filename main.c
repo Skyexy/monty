@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "monty.h"
-#include <unistd.h>
 
 /**
  * error_usage - prints usage message and exits
@@ -44,16 +43,11 @@ int main(int argc, char **argv)
 	int n = 1024;
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
-	char *file2;
-	char *folder;
 
 	global.data_struct = 1;
 	if (argc != 2)
 		error_usage();
 
-	folder = strtok(argv[1], "/");
-	file2 = strtok(NULL, "/");
-	chdir(folder);
 	file = fopen(file2, "r");
 
 	if (!file)
