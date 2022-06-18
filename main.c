@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 
 	if (!file)
 		file_error(argv[1]);
-	(void) argument;
+
 	while (fgets(buffer, n, file) != NULL)
 	{
 		if (status)
