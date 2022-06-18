@@ -131,14 +131,14 @@ void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 size_t print_stack(const stack_t *stack)
 {
 	size_t c = 0;
-	
+
 	while (stack)
 	{
 		printf("%d\n", (stack)->n);
 		stack = stack->next;
 		c++;
 	}
-	return(c);
+	return (c);
 }
 
 /**
@@ -173,12 +173,10 @@ void pint(stack_t **stack, unsigned int line_cnt)
 	if(*stack != NULL)
 	{
 		printf("%d\n", (*stack)->n);
-		return;
 	}
 	else
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_cnt);
 		status = EXIT_FAILURE;
-		return;
 	}
 }
