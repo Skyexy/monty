@@ -14,6 +14,8 @@ void error_usage(void)
 	exit(EXIT_FAILURE);
 }
 
+int status = 0;
+
 /**
  * file_error - prints file error message and exits
  * @argv: argv given by manin
@@ -41,9 +43,6 @@ int main(int argc, char **argv)
 	int n = 1024;
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
-	int status = 0;
-	char *argument = NULL;
-	int que = 1;
 
 	if (argc != 2)
 		error_usage();
@@ -53,7 +52,6 @@ int main(int argc, char **argv)
 	if (!file)
 		file_error(argv[1]);
 	(void) argument;
-	(void) que;
 	while (fgets(buffer, n, file) != NULL)
 	{
 		if (status)
@@ -69,7 +67,7 @@ int main(int argc, char **argv)
 			line_count++;
 			continue;
 		}
-		argument = strtok(NULL, " \t\n");
+		global.argument = strtok(NULL, " \t\n");
 		opcode(&stack, str, line_count);
 		line_count++;
 	}
