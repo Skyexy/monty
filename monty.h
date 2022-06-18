@@ -55,7 +55,7 @@ typedef struct help
 	char *argument;
 } help;
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
-extern char* argument;
+extern int status;
 void push(stack_t **stack, unsigned int line_cnt);
 int is_digit(char *string);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
