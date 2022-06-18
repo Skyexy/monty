@@ -68,7 +68,7 @@ void push(stack_t **stack, unsigned int line_cnt)
 		status = EXIT_FAILURE;
 		return;
 	}
-	if (que == 1)
+	if (global.data_struct == 1)
 	{
 		new->n = num;
 		new->next = *stack;
