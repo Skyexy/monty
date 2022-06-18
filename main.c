@@ -26,7 +26,6 @@ void file_error(char *argv)
 	exit(EXIT_FAILURE);
 }
 
-int status = 0;
 /**
  * main - entry point
  * @argv: list of arguments passed to our program
