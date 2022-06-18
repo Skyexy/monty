@@ -20,12 +20,12 @@ void opcode(stack_t **stack, char *str, unsigned int line_cnt)
 
 	if (!strcmp(str, "stack"))
 	{
-		que = 1;
+		global.data_struct = 1;
 		return;
 	}
 	if (!strcmp(str, "queue"))
 	{
-		que = 2;
+		global.data_struct = 2;
 		return;
 	}
 
