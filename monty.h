@@ -54,6 +54,8 @@ typedef struct help
 	int data_struct;
 	char *argument;
 } help;
+help global;
+
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 extern int status;
 void push(stack_t **stack, unsigned int line_cnt);
