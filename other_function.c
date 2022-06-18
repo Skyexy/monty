@@ -4,24 +4,6 @@
 #include <ctype.h>
 #include "monty.h"
 
-instruction_t instructions[] = {
-	{"push", push},
-	{"pall", pall},
-	{"pint", pint},
-	{"pop", pop},
-	{"swap", swap},
-	{"add", add},
-	{"nop", nop},
-	{"sub", sub},
-	{"div", _div},
-	{"mul", mul},
-	{"pchar", pchar},
-	{"pstr", pstr},
-	{"rotl", rotl},
-	{"rotr", rotr},
-	{NULL, NULL},
-};
-
 /**
  * opcode - function in charge of running builtins
  * @stack: stack given by main
@@ -30,7 +12,7 @@ instruction_t instructions[] = {
  *
  * Return: nothing
  */
-void opcode(stack_t **stack __attribute__((unused)), char *str, unsigned int line_cnt __attribute__((unused)))
+void opcode(stack_t **stack, char *str, unsigned int line_cnt)
 {
 	int i = 0;
 
@@ -170,7 +152,7 @@ int is_digit(char *string)
  */
 void pint(stack_t **stack, unsigned int line_cnt)
 {
-	if(*stack != NULL)
+	if (*stack != NULL)
 	{
 		printf("%d\n", (*stack)->n);
 	}
