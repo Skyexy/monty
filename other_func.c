@@ -87,8 +87,27 @@ void add(stack_t **stack, unsigned int line_cnt)
  *
  * Return: void
  */
-void nop(stack_t **stack , unsigned int line_cnt )
+void nop(stack_t **stack, unsigned int line_cnt)
 {
 	(void) stack;
 	(void) line_cnt;
+}
+/**
+ * pint - computes the remainder of the division
+ * @stack: stack given by main
+ * @line_cnt: line counter
+ *
+ * Return: void
+ */
+void pint(stack_t **stack, unsigned int line_cnt)
+{
+	if (*stack != NULL)
+	{
+		printf("%d\n", (*stack)->n);
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_cnt);
+		status = EXIT_FAILURE;
+	}
 }
