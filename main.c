@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
 	int status = 0;
-	char *argument;
+	char *argument = NULL;
 	int que = 1;
 
 	if (argc != 2)
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 
 	if (!file)
 		file_error(argv[1]);
-
+	(void) char;
 	while (fgets(buffer, n, file) != NULL)
 	{
 		if (status)
