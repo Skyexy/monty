@@ -44,16 +44,16 @@ int main(int argc, char **argv)
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
 	global.data_struct = 1;
-	char *file;
+	char *file2;
 	char *folder;
 
 	if (argc != 2)
 		error_usage();
 
 	folder = strtok(argv[1], "/");
-	file = strtok(NULL, "/");
+	file2 = strtok(NULL, "/");
 	chdir(folder);
-	file = fopen(file, "r");
+	file = fopen(file2, "r");
 
 	if (!file)
 		file_error(argv[1]);
