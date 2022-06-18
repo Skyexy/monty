@@ -52,7 +52,7 @@ typedef struct instruction_s
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 extern int status;
 extern char* argument;
-extern int que = 1;
+extern int que;
 void push(stack_t **stack, unsigned int line_cnt);
 int is_digit(char *string);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
