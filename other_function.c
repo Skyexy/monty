@@ -50,7 +50,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_cnt)
  */
 void push(stack_t **stack, unsigned int line_cnt)
 {
-	char *n = global.argument;;
+	char *n = global.argument;
 	int num = atoi(n);
 	stack_t *new = malloc(sizeof(stack_t));
 
