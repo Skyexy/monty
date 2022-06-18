@@ -87,6 +87,8 @@ void add(stack_t **stack, unsigned int line_cnt)
  *
  * Return: void
  */
-void nop(stack_t **stack __attribute__((unused)), unsigned int line_cnt __attribute__((unused)))
+void nop(stack_t **stack , unsigned int line_cnt )
 {
+	(void) stack;
+	(void) line_cnt;
 }
